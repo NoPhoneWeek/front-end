@@ -3,16 +3,16 @@
   "license": "MIT",
   "repository": "http://example.com",
   "scripts": {
-    "postinstall": "npm run web",
+    "postinstall": "bower install && npm run web",
     "web": "gulp --gulpfile app/gulpfile.js --cwd ."
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.1",
-    "jquery": "^2.2.4"
+    "gulp-sass": "^2.3.1"
   }
 }

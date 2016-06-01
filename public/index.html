@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="noPhoneWeek">
 <head>
     <meta charset="UTF-8">
     <title>Demo startup</title>
@@ -7,7 +7,12 @@
 </head>
 <body>
 
-<div id="target">this content should be changed by js</div>
+<div class="container">
+    <a href="#!/">Homepage</a> |
+    <a href="#!/login">Login</a>
+
+    <div ng-view></div>
+</div>
 
 <script src="/dist/js/external.js"></script>
 <script src="/dist/js/app.js"></script>

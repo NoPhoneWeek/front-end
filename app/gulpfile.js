@@ -4,12 +4,20 @@ var clean = require('gulp-clean');
 var plumber = require('gulp-plumber');
 var scss = require('gulp-sass');
 
+var bowerSrc = 'bower_components/';
 var npmSrc = 'node_modules/';
 var assetsSourceDir = 'app/';
 var assetsPublicDir = 'public/dist/';
 
 var config = {
     sources: {
+        tpls: {
+            dir: assetsSourceDir + 'tpl/',
+            files: '**/*.*',
+            filePath: function(){
+                return this.dir + this.files;
+            }
+        },
         css: {
             external: {
                 files: [
@@ -28,8 +36,9 @@ var config = {
         },
         js: {
             external: [
-                npmSrc + 'jquery/dist/jquery.js',
-                npmSrc + 'bootstrap/dist/js/bootstrap.js'
+                bowerSrc + 'angular/angular.js',
+                bowerSrc + 'angular-route/angular-route.js',
+                bowerSrc + 'angular-resource/angular-resource.js'
             ],
             internal: {
                 dir: assetsSourceDir + 'js/',
@@ -43,6 +52,9 @@ var config = {
         }
     },
     targets: {
+        tpls: {
+            dir: assetsPublicDir + 'tpl/'
+        },
         css: {
             internal: {
                 dir: assetsPublicDir + 'css/',
@@ -70,6 +82,17 @@ var config = {
         }
     }
 };
+
+gulp.task('clean-copy-tpls', function(){
+    return gulp.src(config.targets.tpls.dir, {read: false})
+        .pipe(clean());
+});
+
+gulp.task('copy-tpls', ['clean-copy-tpls'], function(){
+    return gulp.src(config.sources.tpls.filePath(), [{ base: config.sources.tpls.dir }])
+        .pipe(gulp.dest(config.targets.tpls.dir))
+        ;
+});
 
 gulp.task('clean-js-external', function(){
     return gulp.src(config.targets.js.external.filePath(), {read: false})
@@ -112,11 +135,12 @@ gulp.task('css', ['clean-css'], function(){
     ;
 });
 
-gulp.task('clean', ['clean-css', 'clean-js', 'clean-js-external']);
+gulp.task('clean', ['clean-css', 'clean-js', 'clean-js-external', 'clean-copy-tpls']);
 
-gulp.task('default', ['js', 'js-external', 'css']);
+gulp.task('default', ['js', 'js-external', 'css', 'copy-tpls']);
 
-gulp.task('watch', ['css', 'js'], function(){
+gulp.task('watch', ['css', 'js', 'copy-tpls'], function(){
     gulp.watch(config.sources.css.internal.dir + '**/*.scss', ['css']);
     gulp.watch(config.sources.js.internal.path(), ['js']);
+    gulp.watch(config.sources.tpls.filePath(), ['copy-tpls'])
 });
