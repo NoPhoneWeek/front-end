@@ -1,6 +1,16 @@
 # NoPhoneWeek - front-end
 
+### Requirements
 
+> This project was tested on an UNIX based OS (Ubuntu 15.04)
+
+| Package | Minimal version |
+| --- | --- |
+| nodejs | v5 |
+| npm | 3.8.6 |
+| gulp | view package.json |
+| bower | view package.json |
+| boostrap | 3.3.6 |
 
 ### Installation
 
