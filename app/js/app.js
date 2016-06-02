@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('noPhoneWeek', []);
-angular.module('noPhoneWeek', ['ngRoute', 'homepage', 'userLogin']);
+angular.module('noPhoneWeek', ['ngRoute', 'homepage', 'userLogin', 'userRegister']);
 angular.module('noPhoneWeek').config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
@@ -12,6 +12,9 @@ angular.module('noPhoneWeek').config(['$locationProvider', '$routeProvider',
             }).
             when('/login', {
                 template: '<user-login></user-login>'
+            }).
+            when('/register', {
+                template: '<user-register></user-register>'
             }).
             otherwise('/')
         ;
@@ -33,4 +36,9 @@ angular.module('homepage').component('homepage', {
 angular.module('userLogin', []);
 angular.module('userLogin').component('userLogin', {
     templateUrl: '/dist/tpl/user-login.html'
+});
+
+angular.module('userRegister', []);
+angular.module('userRegister').component('userRegister', {
+    templateUrl: '/dist/tpl/user-register.html'
 });
