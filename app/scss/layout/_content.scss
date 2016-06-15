@@ -1,0 +1,10 @@
+.content{
+  position: relative;
+  width: 100%;
+  max-width: $site-width;
+  margin: 0 auto;
+  padding: 20px;
+  @include breakpoint($breakpoint-tablet-portrait){
+    padding: 40px;
+  }
+}

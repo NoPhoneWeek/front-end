@@ -1,0 +1,80 @@
+// Buttons
+// Usage:
+// .btn-flat: flat buttons
+.btn{
+  display: inline-block;
+  padding: .8rem 1.5rem;
+  background: #888;
+  color: $white;
+  border: solid thin rgba($black, .1);
+  text-shadow: 0 -.05em .05em rgba($black, .5);
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 300ms box-shadow ease-in-out;
+  &:hover{
+    box-shadow: .1rem .1rem .25rem rgba($black, .5);
+  }
+  &:focus{
+    outline: none;
+  }
+  &-block{
+    display: block;
+    width: 100%;
+  }
+  &-transparent{
+    border: solid 2px currentColor;
+    background: transparent;
+    color: inherit;
+  }
+  &-plain{
+    padding: .4rem 1.4rem;
+    background: #ddd;
+    color: #888;
+    box-shadow: none;
+    text-shadow: none;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    @include button-hover(#ddd);
+    &:hover{
+      box-shadow: none;
+    }
+  }
+  &-gradiented{
+    background: #58a linear-gradient(hsla(0,0%, 100%,.2),transparent);
+  }
+  // Sizes
+  &-sm{
+    padding: .5rem 1rem;
+  }
+  &-lg{
+    padding: 1.2rem 2rem;
+  }
+  // Colors
+  &-green{
+    background-color: #6b0;
+    @include button-hover(#6b0);
+  }
+  &-red{
+    background-color: #c00;
+    @include button-hover(#c00);
+  }
+  &-yellow{
+    background-color: #eb0;
+    @include button-hover(#eb0);
+  }
+  &-blue{
+    background-color: #387ef5;
+    @include button-hover(#387ef5);
+  }
+  &-skyblue{
+    background-color: #11c1f3;
+    @include button-hover(#11c1f3);
+  }
+  &-green, &-red, &-yellow, &-blue, &-skyblue{
+    color: $white;
+  }
+}

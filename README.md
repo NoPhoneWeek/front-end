@@ -30,9 +30,31 @@ npm run web watch
 ```
 
 ### Run demo
+You can do this however with any server
+
+#### NodeJS
+```
+npm install -g http-server
+```
+
+```
+http-server
+```
+
+#### PHP
 
 ```
 php -S localhost:8000 -t public
 ```
 
-Now go to <http://localhost:8000>
+#### Python2
+
+```
+python -m SimpleHTTPServer 8000
+```
+
+You can learn more ways to run a static server [here][1]
+
+
+
+[1]: https://gist.github.com/willurd/5720255
