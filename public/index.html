@@ -6,37 +6,36 @@
     <link rel="stylesheet" href="/dist/css/bundle.css">
 </head>
 <body>
+<div class="page">
+    <div class="wrapper">
+        <nav class="c-nav">
+          <div class="c-nav__icon">
+            <a href="#!/">
+                  No <strong>Phone</strong> Week
+             </a>
+          </div>
+              <ul>
+                <li>
+                  <a href="#!/about">
+                    About
+                  </a>
+                </li>
+                <!-- <li>
+                  <a href="">
+                    Learn More
+                  </a>
+                </li> -->
+                <li>
+                  <a class="a--alternative" href="#!/login">
+                    Login
+                  </a>
+                </li>
+              </ul>
+        </nav>
 
-<div class="container">
+        <div ng-view></div>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#!/">No Phone Week</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-                    <!--<li><a href="#">Link</a></li>-->
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#!/login">Login</a></li>
-                    <li><a href="#!/register">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div ng-view></div>
+    </div>
 </div>
 
 <script src="/dist/js/external.js"></script>

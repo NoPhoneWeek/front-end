@@ -3,7 +3,6 @@ var concat = require('gulp-concat');
 var clean = require('gulp-clean');
 var plumber = require('gulp-plumber');
 var scss = require('gulp-sass');
-
 var bowerSrc = 'bower_components/';
 var npmSrc = 'node_modules/';
 var assetsSourceDir = 'app/';
