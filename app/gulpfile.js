@@ -27,7 +27,7 @@ var config = {
             internal: {
                 dir: assetsSourceDir + 'scss/',
                 files: [
-                    'index.scss'
+                    'app.scss'
                 ],
                 path: function(){
                     return this.dir + this.files;
