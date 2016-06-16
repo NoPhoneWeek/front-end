@@ -4,7 +4,7 @@
   "repository": "http://example.com",
   "scripts": {
     "postinstall": "bower install && npm run web",
-    "web": "gulp --gulpfile app/gulpfile.js --cwd ."
+    "start": "gulp --gulpfile app/gulpfile.js --cwd ."
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
@@ -14,5 +14,15 @@
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.13.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7"
   }
 }

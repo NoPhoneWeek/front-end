@@ -2,7 +2,7 @@
 
 ### Requirements
 
-> This project was tested on an UNIX based OS (Ubuntu 15.04)
+> This project was tested on an UNIX based OS (Ubuntu 15.04 and OS X 10.11)
 
 | Package | Minimal version |
 | --- | --- |
@@ -18,43 +18,12 @@
 npm install
 ```
 
-> `npm install` will trigger next command when finishes
-
-### Compile js files
-
+### Run 
 ```
-npm run web
-
-# or in watch mode
-npm run web watch
+npm start
 ```
 
-### Run demo
-You can do this however with any server
-
-#### NodeJS
+### Test
 ```
-npm install -g http-server
+npm test
 ```
-
-```
-http-server
-```
-
-#### PHP
-
-```
-php -S localhost:8000 -t public
-```
-
-#### Python2
-
-```
-python -m SimpleHTTPServer 8000
-```
-
-You can learn more ways to run a static server [here][1]
-
-
-
-[1]: https://gist.github.com/willurd/5720255
