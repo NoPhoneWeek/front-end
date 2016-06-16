@@ -3,7 +3,7 @@
   "license": "MIT",
   "repository": "http://example.com",
   "scripts": {
-    "postinstall": "bower install && npm run web",
+    "postinstall": "bower install",
     "start": "gulp --gulpfile app/gulpfile.js --cwd ."
   },
   "dependencies": {
