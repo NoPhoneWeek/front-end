@@ -28,7 +28,7 @@ angular.module('noPhoneWeek').config(['$locationProvider', '$routeProvider',
 angular.module('homepage', []);
 // component
 angular.module('homepage').component('homepage', {
-    templateUrl: '/dist/tpl/homepage.html',
+    templateUrl: '/dist/templates/homepage.html',
     controller: [
         function DevicesListController(){
             this.content = 'Hello world';
@@ -38,15 +38,15 @@ angular.module('homepage').component('homepage', {
 
 angular.module('userLogin', []);
 angular.module('userLogin').component('userLogin', {
-    templateUrl: '/dist/tpl/user-login.html'
+    templateUrl: '/dist/templates/user-login.html'
 });
 
 angular.module('userRegister', []);
 angular.module('userRegister').component('userRegister', {
-    templateUrl: '/dist/tpl/user-register.html'
+    templateUrl: '/dist/templates/user-register.html'
 });
 
 angular.module('userRecover', []);
 angular.module('userRecover').component('userRecover', {
-    templateUrl: '/dist/tpl/user-recover.html'
+    templateUrl: '/dist/templates/user-recover.html'
 });

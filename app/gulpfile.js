@@ -22,7 +22,7 @@ var assetsPublicDir = 'public/dist/';
 var config = {
   sources: {
     tpls: {
-      dir: assetsSourceDir + 'tpl/',
+      dir: assetsSourceDir + 'templates/',
       files: '**/*.*',
       filePath: function(){
         return this.dir + this.files;
@@ -63,7 +63,7 @@ var config = {
   },
   targets: {
     tpls: {
-      dir: assetsPublicDir + 'tpl/'
+      dir: assetsPublicDir + 'templates/'
     },
     css: {
       internal: {
