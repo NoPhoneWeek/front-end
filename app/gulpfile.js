@@ -88,4 +88,4 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['clean', 'scripts', 'styles', 'templates']);
 
-gulp.task('default', ['clean', 'scripts', 'styles', 'templates', 'browser-sync', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'templates', 'browser-sync', 'watch']);
