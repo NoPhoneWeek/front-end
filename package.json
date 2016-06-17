@@ -1,7 +1,10 @@
 {
-  "description": "testing purpose",
+  "description": "Nophone project",
   "license": "MIT",
-  "repository": "http://example.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NoPhoneWeek/front-end"
+  },
   "scripts": {
     "postinstall": "bower install",
     "build": "gulp build --gulpfile app/gulpfile.js --cwd .",
@@ -11,7 +14,6 @@
     "bootstrap": "^3.3.6",
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.1"
@@ -19,6 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.13.0",
+    "del": "^2.2.0",
     "gulp-concat-css": "^2.3.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-postcss": "^6.1.1",

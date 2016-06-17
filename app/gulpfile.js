@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var clean = require('gulp-clean');
+var del = require('del');
 var gutil = require('gulp-util');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
@@ -13,141 +13,66 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-
-var bowerSrc = 'bower_components/';
-var npmSrc = 'node_modules/';
-var assetsSourceDir = 'app/';
-var assetsPublicDir = 'public/dist/';
-
-var config = {
-  sources: {
-    tpls: {
-      dir: assetsSourceDir + 'templates/',
-      files: '**/*.*',
-      filePath: function(){
-        return this.dir + this.files;
-      }
-    },
-    css: {
-      external: {
-        files: [
-          npmSrc + 'bootstrap/dist/css/bootstrap.css'
-        ]
-      },
-      internal: {
-        dir: assetsSourceDir + 'scss/',
-        files: [
-          'app.scss'
-        ],
-        path: function(){
-          return this.dir + this.files;
-        }
-      }
-    },
-    js: {
-      external: [
-        bowerSrc + 'angular/angular.js',
-        bowerSrc + 'angular-route/angular-route.js',
-        bowerSrc + 'angular-resource/angular-resource.js'
-      ],
-      internal: {
-        dir: assetsSourceDir + 'js/',
-        files: [
-          '**/*.js'
-        ],
-        path: function(){
-          return this.dir + this.files
-        }
-      }
-    }
+var paths = {
+  source: {
+    scripts: [
+      'bower_components/angular/angular.js',
+      'bower_components/angular-route/angular-route.js',
+      'bower_components/angular-resource/angular-resource.js',
+      'app/js/**/*.js'
+    ],
+    styles: [
+      'node_modules/bootstrap/dist/css/bootstrap.css',
+      'app/scss/**/*.scss'
+    ],
+    templates: [
+      'app/templates/**/*.*'
+    ]
   },
-  targets: {
-    tpls: {
-      dir: assetsPublicDir + 'templates/'
-    },
-    css: {
-      internal: {
-        dir: assetsPublicDir + 'css/',
-        file: 'bundle.css',
-        filePath: function(){
-          return this.dir + this.file;
-        }
-      }
-    },
-    js: {
-      external: {
-        dir: assetsPublicDir + 'js/',
-        file: 'external.js',
-        filePath: function(){
-            return this.dir + this.file;
-        }
-      },
-      internal: {
-        dir: assetsPublicDir + 'js/',
-        file: 'app.js',
-        filePath: function(){
-          return this.dir + this.file;
-        }
-      }
-    }
+  target: {
+    scripts: 'public/dist/js',
+    styles: 'public/dist/css',
+    templates: 'public/dist/templates',
+    sourcemaps: './maps'
   }
 };
 
-gulp.task('clean-copy-tpls', function(){
-    return gulp.src(config.targets.tpls.dir, {read: false})
-        .pipe(clean());
+gulp.task('clean', function() {
+  return del(['public/dist/**/*']);
 });
 
-gulp.task('copy-tpls', ['clean-copy-tpls'], function(){
-    return gulp.src(config.sources.tpls.filePath(), [{ base: config.sources.tpls.dir }])
-        .pipe(gulp.dest(config.targets.tpls.dir))
-        ;
+gulp.task('styles', function() {
+  var processors = [
+    autoprefixer({browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']})
+  ];
+  gulp.src(paths.source.styles)
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(concatCss('bundle.css'))
+    .pipe(postcss(processors))
+    .pipe(nano())
+    .pipe(sourcemaps.write(paths.target.sourcemaps))
+    .pipe(gulp.dest(paths.target.styles))
+    .pipe(reload({stream:true}));
 });
 
-gulp.task('clean-js-external', function(){
-    return gulp.src(config.targets.js.external.filePath(), {read: false})
-        .pipe(clean());
-});
-gulp.task('clean-js', function(){
-    return gulp.src(config.targets.js.internal.filePath(), {read: false})
-        .pipe(clean());
-});
-
-gulp.task('clean-css', function(){
-    return gulp.src(config.targets.css.internal.filePath(), {read: false})
-        .pipe(clean());
+gulp.task('scripts', function() {
+  gulp.src(paths.source.scripts)
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write(paths.target.sourcemaps))
+    .pipe(gulp.dest(paths.target.scripts))
+    .pipe(reload({stream:true}));
 });
 
-gulp.task('js-external', ['clean-js-external'], function(){
-    return gulp.src(config.sources.js.external)
-        .pipe(plumber())
-        .pipe(concat(config.targets.js.external.file))
-        .pipe(gulp.dest(config.targets.js.external.dir))
-    ;
+gulp.task('templates', function(){
+  gulp.src(paths.source.templates)
+    .pipe(gulp.dest(paths.target.templates));
 });
 
-gulp.task('js', ['clean-js'], function(){
-    return gulp.src(config.sources.js.internal.path())
-        .pipe(plumber())
-        .pipe(concat(config.targets.js.internal.file))
-        .pipe(gulp.dest(config.targets.js.internal.dir))
-    ;
-});
-
-gulp.task('css', ['clean-css'], function(){
-    var externalCssFiles = config.sources.css.external.files;
-    var internalCssFiles = config.sources.css.internal.path();
-    var cssSourceFiles = externalCssFiles.concat(internalCssFiles);
-    return gulp.src(cssSourceFiles)
-        .pipe(sass({"bundleExec": true}))
-        .pipe(concat(config.targets.css.internal.file))
-        .pipe(gulp.dest(config.targets.css.internal.dir))
-    ;
-});
-
-gulp.task('clean', ['clean-css', 'clean-js', 'clean-js-external', 'clean-copy-tpls']);
-
-gulp.task('browser-sync', function(){
+gulp.task('browser-sync', function() {
   browserSync({
     server: {
       baseDir: "public"
@@ -155,12 +80,12 @@ gulp.task('browser-sync', function(){
   });
 });
 
-gulp.task('watch', ['css', 'js', 'copy-tpls'], function(){
-    gulp.watch(config.sources.css.internal.dir + '**/*.scss', ['css', reload]);
-    gulp.watch(config.sources.js.internal.path(), ['js', reload]);
-    gulp.watch(config.sources.tpls.filePath(), ['copy-tpls', reload])
+gulp.task('watch', function() {
+  gulp.watch(paths.source.styles, ['styles', reload]);
+  gulp.watch(paths.source.scripts, ['scripts', reload]);
+  gulp.watch(paths.source.templates, ['templates', reload])
 });
 
-gulp.task('build', ['js', 'js-external', 'css', 'copy-tpls']);
+gulp.task('build', ['clean', 'scripts', 'styles', 'templates']);
 
-gulp.task('default', ['js', 'js-external', 'css', 'copy-tpls', 'browser-sync', 'watch']);
+gulp.task('default', ['clean', 'scripts', 'styles', 'templates', 'browser-sync', 'watch']);
