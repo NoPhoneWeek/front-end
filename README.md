@@ -23,6 +23,12 @@ npm install
 npm start
 ```
 
+### Build
+To build distribution files without running the live server
+```
+npm run build
+```
+
 ### Test
 ```
 npm test

@@ -161,4 +161,6 @@ gulp.task('watch', ['css', 'js', 'copy-tpls'], function(){
     gulp.watch(config.sources.tpls.filePath(), ['copy-tpls', reload])
 });
 
+gulp.task('build', ['js', 'js-external', 'css', 'copy-tpls']);
+
 gulp.task('default', ['js', 'js-external', 'css', 'copy-tpls', 'browser-sync', 'watch']);

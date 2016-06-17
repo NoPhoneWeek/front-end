@@ -4,6 +4,7 @@
   "repository": "http://example.com",
   "scripts": {
     "postinstall": "bower install",
+    "build": "gulp build --gulpfile app/gulpfile.js --cwd .",
     "start": "gulp --gulpfile app/gulpfile.js --cwd ."
   },
   "dependencies": {

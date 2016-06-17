@@ -8,7 +8,7 @@ html{
   font-size: 62.5%;
 }
 body{
-  font-family: 'Roboto', serif;
+  font-family: $font--primary;
   font-size: 1.6rem;
   line-height: 1.6;
   background: $bg-color;
@@ -84,73 +84,10 @@ em{
   background-size: cover;
 }
 
-.wrapper {
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  background: rgba(0,0,0,0.7);
-}
-
-.c-nav {
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 50px;
-  font-family: $font--secondary;
-  
-  &__icon {
-    float: left;
-    border: 3px solid grey;
-    min-height: 50px;
-    min-width: 50px;
-    max-width: 80px;
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    padding: 10px;
-    
-    a {
-      width: 100%;
-      -ms-align-self: center;
-      -webkit-align-self: center;
-      align-self: center;
-      text-decoration: none;
-      color: lightgrey;
-    }
-  }
-  
-  ul {
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    height: 70px;
-    justify-content: flex-end;
-    
-    li {
-      list-style-type: none;
-      -webkit-align-self: center;
-      -ms-align-self: center;
-      align-self: center;
-      margin: 0 15px;
-      letter-spacing: 2px;
-      a {
-        text-decoration: none;
-        color: white;
-        font-family: $font--secondary;
-        font-weight: 100;
-      }
-    }
-  }
-}
-
-.a--alternative {
-  color: #3498db !important;
-}
-
 .main {
   margin-left: 10%;
   margin-top: 100px;;
-  
+
   h1 {
     font-family: $font--primary;
     letter-spacing: 3px;
@@ -160,7 +97,7 @@ em{
     text-transform: uppercase;
     font-weight: 700;
   }
-  
+
   h4 {
     letter-spacing: 1px;
     margin: 10px 0 20px;
@@ -168,7 +105,7 @@ em{
     font-family: $font--secondary;
     font-size: .85rem;
   }
-  
+
   &__button {
     letter-spacing: 2px;
     display: inline-block;
@@ -180,10 +117,10 @@ em{
     text-transform: uppercase;
     font-family: $font--secondary;
     transition: background-color .35s ease;
-    
+
     &:hover, &:focus, &:active {
       background: lighten(#3498db, 15%);
     }
   }
-  
+
 }

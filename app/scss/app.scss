@@ -17,14 +17,12 @@
 @import 'components/forms';
 @import 'components/table';
 @import 'components/hamburger';
-
-@import 'components/page';
-@import 'components/wrapper';
 @import 'components/nav';
 @import 'components/modal';
 
 // Layout
 @import 'layout/main';
+@import 'layout/wrapper';
 
 // Specifity/Cascade delayed modules
 @import 'layout/print';
