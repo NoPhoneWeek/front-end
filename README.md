@@ -28,6 +28,7 @@ To build distribution files without running the live server
 ```
 npm run build
 ```
+> To build images run `npm run images` (requires imagemagick & graphicsmagick)
 
 ### Test
 ```

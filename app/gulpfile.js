@@ -9,6 +9,11 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var nano = require('gulp-cssnano');
 var concatCss = require('gulp-concat-css');
+var imagemin = require('gulp-imagemin');
+var imageResize = require('gulp-image-resize');
+var parallel = require('concurrent-transform');
+var os = require('os');
+var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
@@ -27,12 +32,16 @@ var paths = {
     ],
     templates: [
       'app/templates/**/*.*'
+    ],
+    images: [
+      'app/images/**/*.*'
     ]
   },
   target: {
     scripts: 'public/dist/js',
     styles: 'public/dist/css',
     templates: 'public/dist/templates',
+    images: 'public/dist/images',
     sourcemaps: './maps'
   }
 };
@@ -65,6 +74,16 @@ gulp.task('scripts', function() {
     .pipe(sourcemaps.write(paths.target.sourcemaps))
     .pipe(gulp.dest(paths.target.scripts))
     .pipe(reload({stream:true}));
+});
+
+gulp.task('images', function(){
+  gulp.src(paths.source.images)
+    .pipe(parallel(
+      imageResize({ width: 600 }),
+      os.cpus().length
+    ))
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest(paths.target.images));
 });
 
 gulp.task('templates', function(){
