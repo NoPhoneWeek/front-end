@@ -8,8 +8,23 @@
  *
  *   @example
  *   <div class="row">
- *     <div class="col">Col 1/2</div>
- *     <div class="col">Col 1/2</div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/2</p></div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/2</p></div>
+ *   </div>
+ *   <div class="row">
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *   </div>
+ *   <div class="row">
+ *     <div class="col col-50"><p class="u-contentbg u-txtcenter">Col 50</p></div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *   </div>
+ *   <div class="row">
+ *     <div class="col"><p class="u-contentbg u-txtcenter">Col 1/4</p></div>
+ *     <div class="col col-75"><p class="u-contentbg u-txtcenter">Col 75</p></div>
  *   </div>
  */
 

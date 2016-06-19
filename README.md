@@ -34,3 +34,7 @@ npm run build
 ```
 npm test
 ```
+
+### Contributing
+You are encouraged to contribute. To do so please read the [contributing guide](https://github.com/NoPhoneWeek/front-end/blob/master/CONTRIBUTING.md)
+

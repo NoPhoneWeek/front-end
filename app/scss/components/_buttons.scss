@@ -1,19 +1,20 @@
 /**
  * Buttons:
- * `.btn` - Button classes
+ * `.button` - Button classes
  *
  *   @example
- *   <button class="btn btn-transparent">Transparent buttons</button>
- *   <button class="btn btn-green">Green buttons</button>
- *   <button class="btn btn-red">Red buttons</button>
- *   <button class="btn btn-yellow">Yellow buttons</button>
- *   <button class="btn btn-blue">Blue buttons</button>
- *   <button class="btn btn-skyblue">Sky blue buttons</button>
+ *   <button class="button button-transparent">Transparent buttons</button>
+ *   <button class="button button-green">Green buttons</button>
+ *   <button class="button button-red">Red buttons</button>
+ *   <button class="button button-yellow">Yellow buttons</button>
+ *   <button class="button button-blue">Blue buttons</button>
+ *   <button class="button button-skyblue">Sky blue buttons</button>
  *   <p style="margin: 10px 0">
- *   <button class="btn btn-blue btn-gradiented">Gradiented buttons</button>
+ *   <button class="button button-blue button-gradiented">Gradiented buttons</button>
+ *   <button class="button button-plain">Plain button</button>
  *   </p>
  */
-.btn{
+.button{
   display: inline-block;
   padding: .8rem 1.5rem;
   background: #888;
@@ -29,12 +30,11 @@
   &:hover{
     box-shadow: .1rem .1rem .25rem rgba($black, .5);
   }
+  &:not(.button-plain):not(.button-transparent):hover{
+    color: $white;
+  }
   &:focus{
     outline: none;
-  }
-  &-block{
-    display: block;
-    width: 100%;
   }
   &-transparent{
     border: solid 2px currentColor;
@@ -59,11 +59,26 @@
     background: #58a linear-gradient(hsla(0,0%, 100%,.2),transparent);
   }
   // Sizes
+  /**
+   * Button Sizes:
+   * Button in different sizes
+   *
+   *   @example
+   *   <p><button class="button button-sm">Small Button</button></p>
+   *   <p><button class="button">Regular Button</button></p>
+   *   <p><button class="button button-lg">Large Button</button></p>
+   *   <p><button class="button button-block">Block Button</button></p>
+   *
+   */
   &-sm{
     padding: .5rem 1rem;
   }
   &-lg{
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 3rem;
+  }
+  &-block{
+    display: block;
+    width: 100%;
   }
   // Colors
   &-green{
