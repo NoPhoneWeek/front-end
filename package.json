@@ -9,7 +9,8 @@
     "postinstall": "bower install",
     "build": "gulp build --gulpfile app/gulpfile.js --cwd .",
     "start": "gulp --gulpfile app/gulpfile.js --cwd .",
-    "images": "gulp images --gulpfile app/gulpfile.js --cwd ."
+    "images": "gulp images --gulpfile app/gulpfile.js --cwd .",
+    "styleguides": "styledown app/scss/components/*.scss app/scss/config.md > public/styleguides.html"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",

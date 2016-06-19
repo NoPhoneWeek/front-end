@@ -1,5 +1,19 @@
+/**
+ * Prompt:
+ * `.prompt` - Prompts are alerts.
+ *
+ *   @example
+ *   <div class="prompt prompt--success prompt--wide">
+ *    This is an alert
+ *   </div>
+ *   <div class="prompt prompt--warning prompt--wide">
+ *    This is an alert
+ *   </div>
+ *   <div class="prompt prompt--danger prompt--wide">
+ *    This is an alert
+ *   </div>
+ */
 .prompt{
-  max-width: 320px;
   margin: 20px auto;
   padding: 10px;
   border: solid thin hsla(0, 0%, 0%, .05);
@@ -9,6 +23,8 @@
   &:empty{
     display: none;
   }
+
+  // Colors
   &--warning{
     background-color: #eb0;
   }
@@ -18,6 +34,8 @@
   &--success{
     background-color: #6b0;
   }
+
+  // Sizes
   &--wide{
     width: 100%;
   }

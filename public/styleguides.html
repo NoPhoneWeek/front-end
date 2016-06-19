@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>Styledown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css">
+  <link rel="stylesheet" href="/dist/css/bundle.css">
+</head>
+
+<body class="sg">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>No Phone</h1>
+      <p>This is the front-end development styleguide for the NoPhone project</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sg-container">
+      <section class="sg-block sg-section-buttons">
+        <div class="sg-text">
+          <h3 id="buttons" class="sg">Buttons</h3>
+          <p class="sg">
+            <code class="sg">.btn</code>- Button classes</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <button class="btn btn-transparent">Transparent buttons</button>
+            <button class="btn btn-green">Green buttons</button>
+            <button class="btn btn-red">Red buttons</button>
+            <button class="btn btn-yellow">Yellow buttons</button>
+            <button class="btn btn-blue">Blue buttons</button>
+            <button class="btn btn-skyblue">Sky blue buttons</button>
+            <p style="margin: 10px 0">
+              <button class="btn btn-blue btn-gradiented">Gradiented buttons</button>
+            </p>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-transparent&quot;</span>&gt;</span>Transparent buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-green&quot;</span>&gt;</span>Green buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-red&quot;</span>&gt;</span>Red buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-yellow&quot;</span>&gt;</span>Yellow buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-blue&quot;</span>&gt;</span>Blue buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-skyblue&quot;</span>&gt;</span>Sky blue buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;margin: 10px 0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-blue btn-gradiented&quot;</span>&gt;</span>Gradiented buttons<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+        </div>
+      </section>
+
+      <section class="sg-block sg-section-grid">
+        <div class="sg-text">
+          <h3 id="grid" class="sg">Grid</h3>
+          <p class="sg">Using flexbox for the grid, inspired by Philip Walton:
+            <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/" class="sg">http://philipwalton.github.io/solved-by-flexbox/demos/grids/</a>
+            By default each .col within a .row will evenly take up available width, and the height of each .col with take up the height of the tallest .col in the same .row.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="row">
+              <div class="col">Col 1/2</div>
+              <div class="col">Col 1/2</div>
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;row&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>Col 1/2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;col&quot;</span>&gt;</span>Col 1/2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+
+      <section class="sg-block sg-section-hamburger">
+        <div class="sg-text">
+          <h3 id="hamburger" class="sg">Hamburger</h3>
+          <p class="sg">
+            <code class="sg">.c-hamburger</code>- Hamburger menu for smaller viewports on responsive designs. (
+            <a href="https://github.com/callmenick/Animating-Hamburger-Icons" class="sg">https://github.com/callmenick/Animating-Hamburger-Icons</a>)</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <button class="c-hamburger c-hamburger--htx">
+              <span>toggle menu</span>
+            </button>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;c-hamburger c-hamburger--htx&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>toggle menu<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+        </div>
+      </section>
+
+      <section class="sg-block sg-section-prompt">
+        <div class="sg-text">
+          <h3 id="prompt" class="sg">Prompt</h3>
+          <p class="sg">
+            <code class="sg">.prompt</code>- Prompts are alerts.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="prompt prompt--success prompt--wide">
+              This is an alert
+            </div>
+            <div class="prompt prompt--warning prompt--wide">
+              This is an alert
+            </div>
+            <div class="prompt prompt--danger prompt--wide">
+              This is an alert
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;prompt prompt--success prompt--wide&quot;</span>&gt;</span>
+  This is an alert
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;prompt prompt--warning prompt--wide&quot;</span>&gt;</span>
+  This is an alert
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;prompt prompt--danger prompt--wide&quot;</span>&gt;</span>
+  This is an alert
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+
+      <section class="sg-block sg-section-table">
+        <div class="sg-text">
+          <h3 id="table" class="sg">Table</h3>
+          <p class="sg">
+            <code class="sg">.table</code>- Tables layouts</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="u-fullwidth [ table table--bordered table--themeone ]">
+              <div class="table__row">
+                <div class="table__column table__heading">
+                  <p>Heading 1</p>
+                </div>
+                <div class="table__column table__heading">
+                  <p>Heading 2</p>
+                </div>
+                <div class="table__column table__heading">
+                  <p>Heading 3</p>
+                </div>
+              </div>
+              <div class="table__row">
+                <div class="table__column">
+                  <p>Column 1</p>
+                </div>
+                <div class="table__column">
+                  <p>Column 2</p>
+                </div>
+                <div class="table__column">
+                  <p>Column 3</p>
+                </div>
+              </div>
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;u-fullwidth [ table table--bordered table--themeone ]&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__column table__heading&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Heading 1<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__column table__heading&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Heading 2<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__column table__heading&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Heading 3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__column&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Column 1<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__column&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Column 2<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;table__column&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Column 3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+
+</html>

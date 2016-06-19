@@ -203,6 +203,7 @@
 @mixin button-hover($bgcolor){
   &:hover{
     background: darken($bgcolor, 5%);
+    color: $white;
   }
 }
 

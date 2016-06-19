@@ -1,14 +1,21 @@
-/*---------------------------------------*\
-  Table (.table)
-  usage
-  @see it can be made full-width for convenience with
-  a utility class
-<div class="u-fullwidth [ table table--bordered table--themeone ]">
-  <div class="table__row">
-    <div class="table__column"><p>Content here</p></div>
-  </div>
-</div>
-\*---------------------------------------*/
+/**
+ * Table:
+ * `.table` - Tables layouts
+ *
+ *   @example
+ *   <div class="u-fullwidth [ table table--bordered table--themeone ]">
+ *     <div class="table__row">
+ *      <div class="table__column table__heading"><p>Heading 1</p></div>
+ *      <div class="table__column table__heading"><p>Heading 2</p></div>
+ *      <div class="table__column table__heading"><p>Heading 3</p></div>
+ *     </div>
+ *     <div class="table__row">
+ *      <div class="table__column"><p>Column 1</p></div>
+ *      <div class="table__column"><p>Column 2</p></div>
+ *      <div class="table__column"><p>Column 3</p></div>
+ *     </div>
+ *   </div>
+ */
 .table{
   display: table;
   table-layout: fixed;
@@ -35,7 +42,7 @@
       }
     }
   }
-  &__header{
+  &__heading{
     background: #eee;
     font-weight: bolder;
   }

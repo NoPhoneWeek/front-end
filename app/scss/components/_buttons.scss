@@ -1,13 +1,25 @@
-// Buttons
-// Usage:
-// .btn-flat: flat buttons
+/**
+ * Buttons:
+ * `.btn` - Button classes
+ *
+ *   @example
+ *   <button class="btn btn-transparent">Transparent buttons</button>
+ *   <button class="btn btn-green">Green buttons</button>
+ *   <button class="btn btn-red">Red buttons</button>
+ *   <button class="btn btn-yellow">Yellow buttons</button>
+ *   <button class="btn btn-blue">Blue buttons</button>
+ *   <button class="btn btn-skyblue">Sky blue buttons</button>
+ *   <p style="margin: 10px 0">
+ *   <button class="btn btn-blue btn-gradiented">Gradiented buttons</button>
+ *   </p>
+ */
 .btn{
   display: inline-block;
   padding: .8rem 1.5rem;
   background: #888;
   color: $white;
   border: solid thin rgba($black, .1);
-  text-shadow: 0 -.05em .05em rgba($black, .5);
+  text-shadow: 0 -.05em .02em rgba($black, .5);
   text-align: center;
   font-size: 1.4rem;
   line-height: 1.5;

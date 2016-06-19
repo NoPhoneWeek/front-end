@@ -1,10 +1,14 @@
-/******************
-* Hamburger Component
-* (https://github.com/callmenick/Animating-Hamburger-Icons)
-* <button class="c-hamburger c-hamburger--htx">
-*   <span>toggle menu</span>
-* </button>
-*/
+/**
+ * Hamburger:
+ * `.c-hamburger` - Hamburger menu for smaller viewports
+ * on responsive designs.
+ * (https://github.com/callmenick/Animating-Hamburger-Icons)
+ *
+ *   @example
+ *   <button class="c-hamburger c-hamburger--htx">
+ *     <span>toggle menu</span>
+ *   </button>
+ */
 $button-width: 36px;
 $button-height: 36px;
 $bar-thickness: 2px;
@@ -63,7 +67,7 @@ $visibility-limit: $breakpoint-tablet-portrait;
         bottom: -$bar-thickness - $button-bar-space;
       }
     }
-    /**
+    /*-
      * Style 1
      *
      * Rotating hamburger icon (rot), that simply rotates 90
@@ -80,7 +84,7 @@ $visibility-limit: $breakpoint-tablet-portrait;
         }
       }
     }
-    /**
+    /*-
      * Style 2
      *
      * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
@@ -118,7 +122,7 @@ $visibility-limit: $breakpoint-tablet-portrait;
         }
       }
     }
-    /**
+    /*-
      * Style 3
      * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
      * arrow. Usually indicates an off canvas menu sliding in from left that
@@ -154,7 +158,7 @@ $visibility-limit: $breakpoint-tablet-portrait;
         }
       }
     }
-    /**
+    /*-
      * Style 4
      * Hamburger to right-arrow (htra). Hamburger menu transforms to a
      * right-pointing arrow. Usually indicates an off canvas menu sliding in from
