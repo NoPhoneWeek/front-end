@@ -151,7 +151,7 @@ When using URLs to an absolute web address, avoid specifying a protocol use prot
 ```
 
 #### Comments
-Each component should have an heading comment. Present commenting pattern is in the [styledown](https://github.com/styledown/styledown) format:
+Each component should have an heading comment. Present commenting pattern is in the [usejs](http://usejsdoc.org/)/[styledown](https://github.com/styledown/styledown) format:
 
 ```scss
 /**
