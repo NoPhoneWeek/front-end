@@ -3,13 +3,13 @@
  * `.prompt` - Prompts are alerts.
  *
  *   @example
- *   <div class="prompt prompt--success prompt--wide">
+ *   <div class="prompt prompt--success">
  *    This is an alert
  *   </div>
- *   <div class="prompt prompt--warning prompt--wide">
+ *   <div class="prompt prompt--warning">
  *    This is an alert
  *   </div>
- *   <div class="prompt prompt--danger prompt--wide">
+ *   <div class="prompt prompt--danger">
  *    This is an alert
  *   </div>
  */
@@ -36,7 +36,7 @@
   }
 
   // Sizes
-  &--wide{
-    width: 100%;
+  &--compact{
+    width: 320px;
   }
 }

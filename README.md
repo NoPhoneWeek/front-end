@@ -30,6 +30,11 @@ npm run build
 ```
 > To build images run `npm run images` (requires imagemagick & graphicsmagick)
 
+### Generating Styleguide
+```
+npm run styleguides
+```
+
 ### Test
 ```
 npm test
