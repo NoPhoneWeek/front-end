@@ -14,16 +14,16 @@ Use 2 line spaces not tabs both for script and stylesheets. A .editorconfig file
 Use  class selectors in the CSS to avoid unwanted specificity spikes. IDs should only be used as JavaScript hooks.  If you need a class name as a JavaScript hook then use the `.js-` prefix/namespace. All CSS selectors should be in lower case and follow the BEM methods where there are components.
 
 #### No Self Closing Tags
-HTML5 allows tags like `<br />`, `<hr />`, and `<img src="cat.jpg" alt="" />` for backward compatibility but there are only compulsory to XHTML. Avoid such tags and use it this way: `<br>`, `<hr>`, `<img src="cat.jpg" alt="">`.
+HTML5 allows tags like `<br />`, `<hr />`, and `<img src="cat.jpg" alt="" />` for backward compatibility but they are only compulsory to XHTML. Avoid such tags and use it this way: `<br>`, `<hr>`, `<img src="cat.jpg" alt="">`.
 
 #### Namespacing
 Harry Roberts made a [great guide](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) to [namespacing CSS](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/). Consider following most of these patterns but most importantly here are some of the namespaces that we use:
 
-* *Utility Classes:* Utility classes are helper classes that can be used anywhere within the HTML to avoid inline styles e.g for aligning text you can use `.u-txtcenter`, `.u-txtleft`, `.u-txtright`.
+* **Utility Classes:** Utility classes are helper classes that can be used anywhere within the HTML to avoid inline styles e.g for aligning text you can use `.u-txtcenter`, `.u-txtleft`, `.u-txtright`.
 
-* *JavaScript Hooks:* JavaScripts hooks are CSS classes that are used by the scripts and not inside CSS. We use the `.js-` prefix to distinguish them like `.js-toggleMenu`.
+* **JavaScript Hooks:** JavaScripts hooks are CSS classes that are used by the scripts and not inside CSS. We use the `.js-` prefix to distinguish them like `.js-toggleMenu`.
 
-* *State based classes:* According to [SMACSS](https://smacss.com/book/type-state) state rules shouldn't be nested classes restricted to particular elements but instead stand separately in their own namespace `.is-` . We also use `.has-` as Harry recommends.
+* **State based classes:** According to [SMACSS](https://smacss.com/book/type-state) state rules shouldn't be nested classes restricted to particular elements but instead stand separately in their own namespace `.is-` . We also use `.has-` as Harry recommends.
 
 ```scss
 // Wrong
