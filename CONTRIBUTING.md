@@ -5,10 +5,12 @@ patterns and conventions and it'll be good you adhere to them
 as you contribute.
 
 ## Styling Pattern
-You should primarily be familiar with patterns from [SMACSS](https://smacss.com/) and [BEM](https://en.bem.info/method/) as the Sass architecture is based on them. I'll rehash some excerpts from them here along with some extra coding style.
+It helps to be familiar with patterns from [SMACSS](https://smacss.com/) and [BEM](https://en.bem.info/method/) as the Sass architecture is based on them. But if you're not then that's fine I'll rehash excerpts from them here along with some extra coding patterns and that should do.
 
 #### Indentation
-Use 2 line spaces not tabs both for script and stylesheets. A .editorconfig file should be with each repositories to enforce this. If you don't already have a .editorconfig plugin on your IDE/Editor you can get one from [here](http://editorconfig.org).
+Use 2 line spaces not tabs both for script and stylesheets. A `.editorconfig` file should be with each repositories to enforce this. If you don't already have a .editorconfig plugin on your IDE/Editor you can get one from [here](http://editorconfig.org).
+
+> You'd rather hit the tab key than the space key? Configure your editor to interpret tabs as spaces.
 
 #### No ID Selectors in CSS
 Use  class selectors in the CSS to avoid unwanted specificity spikes. IDs should only be used as JavaScript hooks.  If you need a class name as a JavaScript hook then use the `.js-` prefix/namespace. All CSS selectors should be in lower case and follow the BEM methods where there are components.
