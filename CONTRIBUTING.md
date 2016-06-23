@@ -151,7 +151,7 @@ When using URLs to an absolute web address, avoid specifying a protocol use prot
 ```
 
 #### Comments
-Each component should have an heading comment. Present commenting pattern is in the [usejs](http://usejsdoc.org/)/[styledown](https://github.com/styledown/styledown) format:
+Each component should have an heading comment. Present commenting pattern is in the [jsdoc](http://usejsdoc.org/)/[styledown](https://github.com/styledown/styledown) format:
 
 ```scss
 /**
@@ -165,6 +165,8 @@ Each component should have an heading comment. Present commenting pattern is in 
  *   <button class="button button-blue">Blue buttons</button>
  */
 ```
+
+Also, avoid commenting leaving code you commented-out when you push to the repository. If it's something that was in a previous commit you can always reference it by looking back into that commit. If it's something else store it somewhere else but not inside the code. The only kind of comment allowed in code is documentation comments.
 
 #### Rule Direction
 When adding properties and values to a style rule you should ensure that you follow a vertical styling pattern and not an horizontal pattern. Exception is only allowed if the properties in the rule do not exceed 2.
