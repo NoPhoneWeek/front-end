@@ -86,41 +86,5 @@ em{
 
 .main {
   margin-left: 10%;
-  margin-top: 100px;;
-
-  h1 {
-    font-family: $font--primary;
-    letter-spacing: 3px;
-    margin: 10px 0;
-    width: 70px;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
-  h4 {
-    letter-spacing: 1px;
-    margin: 10px 0 20px;
-    color: darkgrey;
-    font-family: $font--secondary;
-    font-size: .85rem;
-  }
-
-  &__button {
-    letter-spacing: 2px;
-    display: inline-block;
-    background: #3498db;
-    color: white;
-    text-decoration: none;
-    padding: 15px 25px;
-    font-size: .65rem;
-    text-transform: uppercase;
-    font-family: $font--secondary;
-    transition: background-color .35s ease;
-
-    &:hover, &:focus, &:active {
-      background: lighten(#3498db, 15%);
-    }
-  }
-
+  margin-top: 100px;
 }
