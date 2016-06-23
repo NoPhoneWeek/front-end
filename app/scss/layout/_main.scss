@@ -8,7 +8,7 @@ html{
   font-size: 62.5%;
 }
 body{
-  font-family: $font--primary;
+  font-family: $font--secondary;
   font-size: 1.6rem;
   line-height: 1.6;
   background: $bg-color;
@@ -96,6 +96,7 @@ em{
     color: white;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 3em;
   }
 
   h4 {
@@ -103,7 +104,7 @@ em{
     margin: 10px 0 20px;
     color: darkgrey;
     font-family: $font--secondary;
-    font-size: .85rem;
+    font-size: 1.5rem;
   }
 
   &__button {
@@ -112,8 +113,8 @@ em{
     background: #3498db;
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    font-size: .65rem;
+    padding: 15px 24px;
+    font-size: 1.3rem;
     text-transform: uppercase;
     font-family: $font--secondary;
     transition: background-color .35s ease;
