@@ -78,6 +78,11 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function(){
   gulp.src(paths.source.images)
+    .pipe(gulp.dest(paths.target.images));
+});
+
+gulp.task('optimizedImages', function(){
+  gulp.src(paths.source.images)
     .pipe(parallel(
       imageResize({ width: 600 }),
       os.cpus().length
