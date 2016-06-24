@@ -30,7 +30,7 @@ npm run build
 ```
 
 ### Generating Images
-To build images run `npm run images`
+Images should be built with the primary build task but to build images explicitly run `npm run images`.
 
 > For production and if you want optimized images in dev use `npm run optimized-images` (requires imagemagick & graphicsmagick)
 

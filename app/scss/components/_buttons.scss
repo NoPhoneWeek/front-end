@@ -101,7 +101,11 @@
     background-color: #11c1f3;
     @include button-hover(#11c1f3);
   }
-  &-green, &-red, &-yellow, &-blue, &-skyblue{
+  &-custom{
+    background-color: #3498db;
+    @include button-hover(#3498db);
+  }
+  &-green, &-red, &-yellow, &-blue, &-skyblue, &-custom{
     color: $white;
   }
 }
