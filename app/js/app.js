@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('noPhoneWeek', ['ui.router'])
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
   // Fallback
-  $urlRouterProvider.otherwise('/homepage')
+  $urlRouterProvider.otherwise('/homepage');
   // Setting up states
   $stateProvider
     .state('home', {
@@ -23,4 +23,4 @@ angular.module('noPhoneWeek', ['ui.router'])
       url: '/recover',
       templateUrl: '/dist/templates/user-recover.html'
     });
-});
+}]);
