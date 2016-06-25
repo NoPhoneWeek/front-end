@@ -26,9 +26,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: 300ms box-shadow ease-in-out;
-  &:hover{
-    box-shadow: .1rem .1rem .25rem rgba($black, .5);
-  }
+  letter-spacing: .5px;
   &:not(.button-plain):not(.button-transparent):hover{
     color: $white;
   }
@@ -93,16 +91,24 @@
     @include button-hover(#eb0);
   }
   &-blue{
-    background-color: #387ef5;
-    @include button-hover(#387ef5);
+    background-color: #3498db;
+    @include button-hover(#3498db);
   }
   &-skyblue{
     background-color: #11c1f3;
     @include button-hover(#11c1f3);
   }
   &-custom{
-    background-color: #3498db;
-    @include button-hover(#3498db);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    font-size: .65em;
+    transition: background-color .35s ease;
+    padding: 1.2rem 3rem;
+      &:hover, &:focus, &:active{
+          text-decoration: none;
+          background: #75b9e7;
+      }      
   }
   &-green, &-red, &-yellow, &-blue, &-skyblue, &-custom{
     color: $white;
