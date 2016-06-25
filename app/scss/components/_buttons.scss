@@ -26,9 +26,6 @@
   cursor: pointer;
   text-decoration: none;
   transition: 300ms box-shadow ease-in-out;
-  &:hover{
-    box-shadow: .1rem .1rem .25rem rgba($black, .5);
-  }
   &:not(.button-plain):not(.button-transparent):hover{
     color: $white;
   }
