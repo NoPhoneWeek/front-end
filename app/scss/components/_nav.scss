@@ -8,10 +8,19 @@
   &__icon {
     float: left;
     border: 3px solid grey;
-    width: 90px;
-    height: 90px;
+    width: 83px;
+    height: 83px;
     display: flex;
     padding: 10px;
+    line-height: 1.3;
+      &__weak {
+          /*color: lightgray;*/
+          font-weight: 300;
+      }
+      &__strong {
+          letter-spacing: 1px;
+          /*font-weight: 700;*/
+      }
     a {
       width: 100%;
       -ms-align-self: center;
@@ -40,9 +49,10 @@
         text-decoration: none;
         color: white;
         font-family: $font--secondary;
-        font-weight: 100;
+        font-weight: 300;
         &.a--alternative{
-          color: #3498db;
+          /*color: #3498db;*/
+            font-weight: 400;
         }
       }
     }
