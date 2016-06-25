@@ -28,12 +28,17 @@ To build distribution files without running the live server
 ```
 npm run build
 ```
-> To build images run `npm run images` (requires imagemagick & graphicsmagick)
+
+### Generating Images
+Images should be built with the primary build task but to build images explicitly run `npm run images`.
+
+> For production and if you want optimized images in dev use `npm run optimized-images` (requires imagemagick & graphicsmagick)
 
 ### Generating Styleguide
 ```
 npm run styleguides
 ```
+and your styleguide will be available in `{hostname}/styleguides.html` from the browser.
 
 ### Test
 ```

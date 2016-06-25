@@ -1,52 +1,26 @@
 'use strict';
 
-angular.module('noPhoneWeek', []);
-angular.module('noPhoneWeek', ['ngRoute', 'homepage', 'userLogin', 'userRegister', 'userRecover']);
-angular.module('noPhoneWeek').config(['$locationProvider', '$routeProvider',
-  function config($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
+angular.module('noPhoneWeek', ['ui.router'])
+.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    $routeProvider.
-      when('/', {
-        template: '<homepage></homepage>'
-      }).
-      when('/login', {
-        template: '<user-login></user-login>'
-      }).
-      when('/register', {
-        template: '<user-register></user-register>'
-      }).
-      when('/recover', {
-        template: '<user-recover></user-recover>'
-      }).
-      otherwise('/')
-    ;
-  }
-]);
-
-// module
-angular.module('homepage', []);
-// component
-angular.module('homepage').component('homepage', {
-  templateUrl: '/dist/templates/homepage.html',
-  controller: [
-    function DevicesListController(){
-      this.content = 'Hello world';
-    }
-  ]
-});
-
-angular.module('userLogin', []);
-angular.module('userLogin').component('userLogin', {
-  templateUrl: '/dist/templates/user-login.html'
-});
-
-angular.module('userRegister', []);
-angular.module('userRegister').component('userRegister', {
-  templateUrl: '/dist/templates/user-register.html'
-});
-
-angular.module('userRecover', []);
-angular.module('userRecover').component('userRecover', {
-  templateUrl: '/dist/templates/user-recover.html'
-});
+  // Fallback
+  $urlRouterProvider.otherwise('/homepage');
+  // Setting up states
+  $stateProvider
+    .state('home', {
+      url: '/homepage',
+      templateUrl: '/dist/templates/homepage.html'
+    })
+    .state('login', {
+      url: '/login',
+      templateUrl: '/dist/templates/user-login.html'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: '/dist/templates/user-register.html'
+    })
+    .state('recover', {
+      url: '/recover',
+      templateUrl: '/dist/templates/user-recover.html'
+    });
+}]);

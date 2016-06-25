@@ -10,14 +10,8 @@
     border: 3px solid grey;
     width: 90px;
     height: 90px;
-    // min-height: 50px;
-    // min-width: 50px;
-    // max-width: 80px;
-    display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    display: flex;
     padding: 10px;
-
     a {
       width: 100%;
       -ms-align-self: center;
@@ -47,11 +41,10 @@
         color: white;
         font-family: $font--secondary;
         font-weight: 100;
+        &.a--alternative{
+          color: #3498db;
+        }
       }
     }
   }
-}
-
-.a--alternative {
-  color: #3498db !important;
 }

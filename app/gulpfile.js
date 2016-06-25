@@ -22,8 +22,7 @@ var paths = {
   source: {
     scripts: [
       'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
       'app/js/**/*.js'
     ],
     styles: [
@@ -47,7 +46,7 @@ var paths = {
 };
 
 gulp.task('clean', function() {
-  return del(['public/dist/**/*']);
+  return del.sync(['public/dist/**/*']);
 });
 
 gulp.task('styles', function() {
@@ -78,6 +77,11 @@ gulp.task('scripts', function() {
 
 gulp.task('images', function(){
   gulp.src(paths.source.images)
+    .pipe(gulp.dest(paths.target.images));
+});
+
+gulp.task('optimizedImages', function(){
+  gulp.src(paths.source.images)
     .pipe(parallel(
       imageResize({ width: 600 }),
       os.cpus().length
@@ -105,6 +109,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.source.templates, ['templates', reload])
 });
 
-gulp.task('build', ['clean', 'scripts', 'styles', 'templates']);
+gulp.task('build', ['clean', 'scripts', 'styles', 'images', 'templates']);
 
 gulp.task('default', ['scripts', 'styles', 'templates', 'browser-sync', 'watch']);

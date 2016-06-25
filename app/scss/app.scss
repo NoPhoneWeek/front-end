@@ -22,7 +22,9 @@
 @import 'components/modal';
 
 // Layout
+@import 'layout/base';
 @import 'layout/main';
+@import 'layout/sections';
 @import 'layout/wrapper';
 
 // Specifity/Cascade delayed modules

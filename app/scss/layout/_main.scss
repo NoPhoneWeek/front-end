@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*--------------------------------*\
   Global Rules/Namespace
 \*--------------------------------*/
@@ -76,6 +77,8 @@ em{
   }
 }
 
+=======
+>>>>>>> master
 .page {
   width: 100%;
   min-height: 100vh;
@@ -86,6 +89,7 @@ em{
 
 .main {
   margin-left: 10%;
+<<<<<<< HEAD
   margin-top: 100px;;
 
   h1 {
@@ -122,5 +126,13 @@ em{
     &:hover, &:focus, &:active {
       background: lighten(#3498db, 15%);
     }
+=======
+  margin-top: 100px;
+  color: $white;
+  &__description{
+    font-family: $font--secondary;
+    font-size: 1.6rem;
+    color: #888;
+>>>>>>> master
   }
 }
