@@ -1,84 +1,4 @@
-<<<<<<< HEAD
-/*--------------------------------*\
-  Global Rules/Namespace
-\*--------------------------------*/
-*{
-  box-sizing: border-box;
-}
-html{
-  font-size: 62.5%;
-}
-body{
-  font-family: $font--secondary;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  background: $bg-color;
-  color: #222;
-  transition: transform 500ms ease;
-  .openNav &{
-    right: 0;
-    transform: translate3d(-70%, 0, 0);
-  }
-}
-blockquote{
-  position: relative;
-  padding: 30px 20px 10px;
-  width: 90%;
-  max-width: 500px;
-  font-weight: 500;
-  &::before, &::after{
-    position: absolute;
-    font-size: 5rem;
-    color: #777;
-  }
-  &::before{
-    content: '“';
-    top: 10px;
-    left: 0;
-  }
-  &::after{
-    content: '”';
-    top: 30px;
-    right: 0;
-  }
-}
-cite{
-  display: block;
-  font-weight: 300;
-  &::before{
-    content: '— ';
-  }
-}
-a{
-  color: #2299D5;
-  text-decoration: none;
-}
-input{
-  font-family: inherit;
-}
-em{
-  font-weight: 400;
-}
-.wrap{
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-  &-2x{
-    width: 2em;
-    height: 2em;
-  }
-}
 
-=======
->>>>>>> master
 .page {
   width: 100%;
   min-height: 100vh;
@@ -89,50 +9,11 @@ em{
 
 .main {
   margin-left: 10%;
-<<<<<<< HEAD
-  margin-top: 100px;;
-
-  h1 {
-    font-family: $font--primary;
-    letter-spacing: 3px;
-    margin: 10px 0;
-    width: 70px;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3em;
-  }
-
-  h4 {
-    letter-spacing: 1px;
-    margin: 10px 0 20px;
-    color: darkgrey;
-    font-family: $font--secondary;
-    font-size: 1.5rem;
-  }
-
-  &__button {
-    letter-spacing: 2px;
-    display: inline-block;
-    background: #3498db;
-    color: white;
-    text-decoration: none;
-    padding: 15px 24px;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-family: $font--secondary;
-    transition: background-color .35s ease;
-
-    &:hover, &:focus, &:active {
-      background: lighten(#3498db, 15%);
-    }
-=======
   margin-top: 100px;
   color: $white;
   &__description{
     font-family: $font--secondary;
     font-size: 1.6rem;
     color: #888;
->>>>>>> master
   }
 }
