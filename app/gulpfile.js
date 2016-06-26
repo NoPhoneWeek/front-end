@@ -26,7 +26,6 @@ var paths = {
       'app/js/**/*.js'
     ],
     styles: [
-      'node_modules/bootstrap/dist/css/bootstrap.css',
       'app/scss/**/*.scss'
     ],
     templates: [

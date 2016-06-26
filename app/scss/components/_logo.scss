@@ -1,0 +1,18 @@
+.logo{
+  border: solid medium grey;
+  width: 83px;
+  height: 83px;
+  padding: 10px;
+  line-height: 1.3;
+    &__weak{
+      font-weight: 300;
+    }
+    &__strong{
+      letter-spacing: 1px;
+    }
+  a{
+    width: 100%;
+    text-decoration: none;
+    color: lightgrey;
+  }
+}
