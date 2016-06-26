@@ -1,0 +1,40 @@
+.authenticator{
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 100px 0 20px;
+  &__container{
+    width: 100%;
+    background: rgba($white, .3);
+    color: rgba($white, .6);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba($black, .8);
+  }
+  &__heading{
+    padding: 10px;
+    text-align: center;
+    border-bottom: solid thin rgba($black, .2);
+  }
+  &__form{
+    padding: 20px;
+    .form__input{
+      background: rgba($black, .08);
+      border: 0;
+      box-shadow: 0 0 2px $black inset;
+    }
+    .help-text{
+      color: inherit;
+    }
+  }
+  &__links{
+    margin-top: 20px;
+    text-align: center;
+    a{
+      display: block;
+      margin-bottom: 5px;
+      color: darken($white, 20%);
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+  }
+}
