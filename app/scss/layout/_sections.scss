@@ -17,8 +17,8 @@
     &__description{
       display: block;
       font-family: $font--secondary;
-      font-size: .85em;
-      font-weight: bold;
+      font-size: 1em;
+      font-weight: 300;
       letter-spacing: 1px;
       margin: 11px 0 18px;
       color: darkgray;
@@ -33,6 +33,10 @@
         display: inline-block;
         margin-left: 20px;
         color: inherit;
+        margin: 15px 20px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-size: 1.1em;
       }
     }
   }

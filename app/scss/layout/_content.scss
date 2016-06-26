@@ -3,8 +3,11 @@
   width: 100%;
   max-width: $site-width;
   margin: 0 auto;
-  padding: 20px;
+  padding: 80px;
+  padding-top: 25px;
   @include breakpoint($breakpoint-tablet-portrait){
-    padding: 40px;
+    padding: 80px;
+    padding-top: 25px;
+    /*Make sure I didn't mess something up here.*/
   }
 }

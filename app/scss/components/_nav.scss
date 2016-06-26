@@ -1,0 +1,60 @@
+.c-nav {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  font-family: $font--secondary;
+
+  &__icon {
+    float: left;
+    border: 3px solid grey;
+    width: 83px;
+    height: 83px;
+    display: flex;
+    padding: 10px;
+    line-height: 1.3;
+      &__weak {
+          /*color: lightgray;*/
+          font-weight: 300;
+      }
+      &__strong {
+          letter-spacing: 1px;
+          /*font-weight: 700;*/
+      }
+    a {
+      width: 100%;
+      -ms-align-self: center;
+      -webkit-align-self: center;
+      align-self: center;
+      text-decoration: none;
+      color: lightgrey;
+    }
+  }
+
+  ul {
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    height: 70px;
+    justify-content: flex-end;
+
+    li {
+      list-style-type: none;
+      -webkit-align-self: center;
+      -ms-align-self: center;
+      align-self: center;
+      margin: 0 15px;
+      letter-spacing: 2px;
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: $font--secondary;
+        font-weight: 300;
+        &.a--alternative{
+          /*color: #3498db;*/
+            font-weight: 400;
+        }
+      }
+    }
+  }
+}
