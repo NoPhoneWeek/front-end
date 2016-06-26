@@ -12,20 +12,20 @@
 @import 'base/h5bp';
 
 // Components
+@import 'components/logo';
 @import 'components/grid';
 @import 'components/buttons';
 @import 'components/prompt';
 @import 'components/forms';
 @import 'components/table';
 @import 'components/hamburger';
-@import 'components/nav';
-@import 'components/modal';
 
 // Layout
 @import 'layout/base';
-@import 'layout/main';
+@import 'layout/content';
+@import 'layout/page';
 @import 'layout/sections';
-@import 'layout/wrapper';
+@import 'layout/authenticator';
 
 // Specifity/Cascade delayed modules
 @import 'layout/print';

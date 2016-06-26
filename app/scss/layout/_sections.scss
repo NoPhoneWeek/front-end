@@ -1,1 +1,39 @@
-.section{}
+.section{
+  &--hero{
+    color: $white;
+    &__caption{
+        font-family: $font--primary;
+        font-size: 2.7em;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+        letter-spacing: 3px;
+        width: 70px;
+        display: block;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+    &__description{
+      display: block;
+      font-family: $font--secondary;
+      font-size: .85em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 11px 0 18px;
+      color: darkgray;
+    }
+    &__header{
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+    &__nav{
+      float: right;
+      a{
+        display: inline-block;
+        margin-left: 20px;
+        color: inherit;
+      }
+    }
+  }
+}

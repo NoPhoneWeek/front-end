@@ -14,7 +14,6 @@
     "styleguides": "styledown app/scss/components/*.scss app/scss/config.md > public/styleguides.html"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",

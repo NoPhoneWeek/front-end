@@ -106,9 +106,15 @@
     transition: background-color .35s ease;
     padding: 1.2rem 3rem;
       &:hover, &:focus, &:active{
+<<<<<<< HEAD
           text-decoration: none;
           background: #75b9e7;
       }      
+=======
+        text-decoration: none;
+        background: #75b9e7;
+      }
+>>>>>>> master
   }
   &-green, &-red, &-yellow, &-blue, &-skyblue, &-custom{
     color: $white;

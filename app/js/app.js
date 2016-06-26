@@ -4,11 +4,11 @@ angular.module('noPhoneWeek', ['ui.router'])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
   // Fallback
-  $urlRouterProvider.otherwise('/homepage');
+  $urlRouterProvider.otherwise('/');
   // Setting up states
   $stateProvider
     .state('home', {
-      url: '/homepage',
+      url: '/',
       templateUrl: '/dist/templates/homepage.html'
     })
     .state('login', {
