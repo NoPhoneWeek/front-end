@@ -6,7 +6,7 @@
   &__container{
     width: 100%;
     background: rgba($white, .3);
-    color: rgba($white, .6);
+    color: rgba($white, .9);
     border-radius: 4px;
     box-shadow: 0 0 10px rgba($black, .8);
   }
@@ -32,7 +32,7 @@
     a{
       display: block;
       margin-bottom: 5px;
-      color: darken($white, 20%);
+      color: darken($white, 10%);
       text-decoration: none;
       font-size: 1.4rem;
     }
