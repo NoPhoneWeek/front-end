@@ -28,7 +28,3 @@ var app = angular.module('noPhoneWeek', ['ui.router'])
       templateUrl: '/dist/templates/user-recover.html'
     });
 }]);
-
-app.controller('ContactController', ['$scope', function($scope){
-  $scope.contactUrl = 'https://formspree.io/your@email.com';
-}]);
