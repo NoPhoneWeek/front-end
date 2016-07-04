@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('noPhoneWeek', ['ui.router'])
+angular.module('noPhoneWeek', ['ui.router', 'noPhoneWeek.controllers'])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
   // Fallback
@@ -9,7 +9,8 @@ angular.module('noPhoneWeek', ['ui.router'])
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '/dist/templates/homepage.html'
+      templateUrl: '/dist/templates/homepage.html',
+      controller: 'AppCtrl'
     })
     .state('login', {
       url: '/login',
