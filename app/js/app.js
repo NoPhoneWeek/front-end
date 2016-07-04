@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('noPhoneWeek', ['ui.router'])
+var app = angular.module('noPhoneWeek', ['ui.router'])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
   // Fallback
@@ -19,8 +19,16 @@ angular.module('noPhoneWeek', ['ui.router'])
       url: '/register',
       templateUrl: '/dist/templates/user-register.html'
     })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: '/dist/templates/contact.html'
+    })
     .state('recover', {
       url: '/recover',
       templateUrl: '/dist/templates/user-recover.html'
     });
+}]);
+
+app.controller('ContactController', ['$scope', function($scope){
+  $scope.contactUrl = 'https://formspree.io/your@email.com';
 }]);
