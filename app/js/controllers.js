@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('noPhoneWeek.controllers', [])
  .controller('AppCtrl', AppController);
 
