@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('noPhoneWeek', ['ui.router'])
+var app = angular.module('noPhoneWeek', ['ui.router'])
 .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
   // Fallback
@@ -18,6 +18,10 @@ angular.module('noPhoneWeek', ['ui.router'])
     .state('register', {
       url: '/register',
       templateUrl: '/dist/templates/user-register.html'
+    })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: '/dist/templates/contact.html'
     })
     .state('recover', {
       url: '/recover',
