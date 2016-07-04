@@ -3,13 +3,5 @@
   background-size: cover;
   width: 100%;
   min-height: 100vh;
-  @include tinted-bg($black, .7, 'http://science-all.com/images/wallpapers/black-and-white-images/black-and-white-images-13.jpg', cover);
-}
-
-.pagepopup{
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  min-height: 100vh;
-  @include tinted-bg($black, .4, 'http://science-all.com/images/wallpapers/black-and-white-images/black-and-white-images-13.jpg', cover);
+  @include tinted-bg($black, .7, '/dist/images/cover-image.jpg', cover);
 }

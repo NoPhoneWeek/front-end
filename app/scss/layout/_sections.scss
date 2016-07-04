@@ -3,21 +3,18 @@
     color: $white;
     &__caption{
         font-family: $font--primary;
-        font-size: 2.7em;
+        font-size: 5rem;
         font-weight: 700;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 0;
+        margin: 10px 0 10px;
         letter-spacing: 3px;
         width: 70px;
-        display: block;
         text-transform: uppercase;
         line-height: 1.2;
     }
     &__description{
       display: block;
       font-family: $font--secondary;
-      font-size: 1em;
+      font-size: 2rem;
       font-weight: 300;
       letter-spacing: 1px;
       margin: 11px 0 18px;
@@ -33,10 +30,6 @@
         display: inline-block;
         margin-left: 20px;
         color: inherit;
-        margin: 15px 20px;
-        letter-spacing: 2px;
-        font-weight: 400;
-        font-size: 1.1em;
       }
     }
   }
