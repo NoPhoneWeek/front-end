@@ -3,7 +3,7 @@
     color: $white;
     &__caption{
         font-family: $font--primary;
-        font-size: 5rem;
+        font-size: 7rem;
         font-weight: 700;
         margin: 10px 0 10px;
         letter-spacing: 3px;
@@ -32,5 +32,7 @@
         color: inherit;
       }
     }
+  }
+  &--about {
   }
 }
