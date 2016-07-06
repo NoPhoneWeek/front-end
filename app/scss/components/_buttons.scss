@@ -79,24 +79,24 @@
   }
   // Colors
   &-green{
-    background-color: #6b0;
-    @include button-hover(#6b0);
+    background-color: $color-component-green;
+    @include button-hover($color-component-green);
   }
   &-red{
-    background-color: #c00;
-    @include button-hover(#c00);
+    background-color: $color-component-red;
+    @include button-hover($color-component-red);
   }
   &-yellow{
-    background-color: #eb0;
-    @include button-hover(#eb0);
+    background-color: $color-component-yellow;
+    @include button-hover($color-component-yellow);
   }
   &-blue{
-    background-color: #3498db;
-    @include button-hover(#3498db);
+    background-color: $color-component-blue;
+    @include button-hover($color-component-blue);
   }
   &-skyblue{
-    background-color: #11c1f3;
-    @include button-hover(#11c1f3);
+    background-color: $color-component-skyblue;
+    @include button-hover($color-component-skyblue);
   }
   &-custom{
     letter-spacing: 2px;

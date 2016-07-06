@@ -1,4 +1,19 @@
 .section{
+  &__heading{
+    position: relative;
+    text-align: center;
+    font-weight: 300;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      left: 0;
+      width: 200px;
+      margin: 0 auto;
+      border-bottom: solid 2px darkgrey;
+    }
+  }
   &--hero{
     color: $white;
     &__caption{
@@ -32,5 +47,8 @@
         color: inherit;
       }
     }
+  }
+  &--contact{
+    background-color: #154c71;
   }
 }

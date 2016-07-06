@@ -28,4 +28,6 @@ angular.module('noPhoneWeek', ['ui.router', 'noPhoneWeek.controllers'])
       url: '/recover',
       templateUrl: '/dist/templates/user-recover.html'
     });
-}]);
+}])
+
+.constant('API_URL', 'http://localhost:4567');
