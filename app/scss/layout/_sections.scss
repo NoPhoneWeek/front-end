@@ -66,5 +66,12 @@
   }
   &--contact{
     background-color: #154c71;
+    background-image: url(/dist/images/cover-image-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+      &__dickbutt{
+          width: 10px;
+          
+      }
   }
 }

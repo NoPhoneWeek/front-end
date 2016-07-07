@@ -1,7 +1,6 @@
 .page{
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background-attachment: fixed;*/
+  @include tinted-bg($black, .0, '/dist/images/cover-image-3.jpg', cover);
   width: 100%;
   min-height: 100vh;
-  @include tinted-bg($black, .7, '/dist/images/cover-image.jpg', cover);
 }
