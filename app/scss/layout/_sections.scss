@@ -9,9 +9,9 @@
     color: #333;
   }
   &__content {
-    float: right;
+    float: left;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #333;
     &--description {
       float: right;
@@ -65,13 +65,11 @@
       margin: 0;
     }
     &__arrow{
-      display: block;
-      margin: 0 auto;
       margin-top: 100px;
       width: 5em;
       position: absolute;
       bottom: 0;
-      left: 50%;
+      left: 47%;
     }
   }
   &--contact{
