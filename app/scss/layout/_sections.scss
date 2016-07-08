@@ -81,7 +81,11 @@
     background-size: cover;
       &__dickbutt{
           width: 10px;
-
+      }
+      &__paypal{
+          text-align: center;
+          position: relative;
+          bottom: 180px;
       }
   }
 }
