@@ -7,18 +7,27 @@
     float: left;
     font-size: 3.5rem;
     color: #333;
+    margin-bottom: 100px;
   }
   &__content {
     float: left;
     font-weight: 500;
     font-size: 2.5rem;
     color: #333;
+    margin-bottom: 12px;
     &--description {
-      float: right;
-      clear: both;
+      float: left;
+      display: block;
       color: #5C5C5C;
       margin-top: 0;
-      font-size: 1.4rem;
+      font-size: 2rem;
+    }
+    &--bullets {
+      float: left;
+      display: block;
+      color: #5C5C5C;
+      margin-top: 0;
+      font-size: 2rem;
     }
   }
   &--hero{
