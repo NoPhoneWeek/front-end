@@ -5,20 +5,19 @@
   padding: 100px 0 20px;
   &__container{
     width: 100%;
-    background: rgba($white, .3);
-    color: rgba($white, .9);
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba($black, .8);
+    background: $white;
+    box-shadow: 0 1px 3px rgba($black, .6);
+    font-family: $font--secondary;
+    padding: 30px 20px;
   }
   &__heading{
-    padding: 10px;
+    margin: 0;
     text-align: center;
-    border-bottom: solid thin rgba($black, .2);
+    font-weight: 300;
+    font-size: 1.5em;
   }
   &__form{
-    padding: 20px;
     .form__input{
-      background: rgba($black, .08);
       border: 0;
       box-shadow: 0 0 2px $black inset;
     }

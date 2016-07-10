@@ -25,14 +25,22 @@
       </div>
     </div>
   </div>
+  <img class="section--hero__arrow" src="http://www.materialui.co/materialIcons/hardware/keyboard_arrow_down_white_192x192.png"/>
 </section>
 <section class="section section--about">
-  <div class="content">
-    <h2 class="section__heading">About DownWeek</h2>
-    <p class="section__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vel, reiciendis provident, delectus rem similique esse vitae obcaecati! Pariatur sequi quisquam sint consectetur sed voluptates doloremque unde itaque, aliquam impedit, sapiente commodi est velit, ipsam deleniti ipsum dicta voluptas totam cum. Assumenda nam saepe, libero eveniet aliquid laborum nostrum optio tempora molestias doloribus, dolor ipsum consequatur vitae iste quibusdam magni mollitia adipisci rerum molestiae ipsam labore quidem ipsa distinctio inventore! Cum nesciunt soluta ex nulla libero aliquam deleniti animi, amet itaque ea sed temporibus. Quas distinctio nobis quae laborum id pariatur consequatur sapiente, voluptates blanditiis nihil aliquid minima facilis, eaque, dolorum porro vero rerum. Praesentium possimus voluptas vel illum reiciendis aliquam ducimus animi maxime rem iusto. Illum amet porro nam placeat quam odio beatae commodi nostrum obcaecati repellat omnis, deleniti similique id eius accusamus, minima ab, quaerat non quidem delectus. Dolore harum exercitationem fuga saepe illum sapiente blanditiis rem facilis.</p>
+  <div class="content clearfix">
+    <h2 class="section__heading">August 1 &mdash; 7</h2>
+    <p class="section__content col-60">Spend the first week in August without any technology.</p>
+    <p class="section__content--description col-60">Sign up to invite your closest friends and connect with those around you:</p>
+    <ul class="section__content--bullets col-40">
+      <li>Thing 1</li>
+      <li>thing</li>
+      <li>ting</li>
+      <li>t</li>
+    </ul>
   </div>
 </section>
-<section class="[ section section--contact ] page">
+<section class="[ section section--contact ]">
   <div class="content">
     <div class="contact">
       <h2 class="contact__heading">Contact Us</h2>
@@ -41,16 +49,24 @@
         <a href=""><i class="icon ion-social-facebook"></i></a>
         <a href=""><i class="icon ion-social-instagram"></i></a>
       </p>
-      <form method="post" action="" class="form contact__form">
+      <form method="post" action="https://formspree.io/Contact@DownWeek.com" class="form contact__form">
         <p>
-          <input type="email" required class="form__input form__input--wide" placeholder="example@provider.com">
+          <input name="Email" type="email" required class="form__input form__input--wide" placeholder="Goku@Example.com">
         </p>
-        <p><input type="text" class="form__input form__input--wide" placeholder="Subject"></p>
+        <p><input name="Subject" type="text" class="form__input form__input--wide" placeholder="Subject"></p>
         <p>
-          <textarea name="" required id="" class="form__text" placeholder="Leave message here"></textarea>
+          <textarea name="Message" required id="" class="form__text" placeholder="Leave message here"></textarea>
         </p>
         <input type="submit" value="Send" class="button button-blue button-block">
       </form>
     </div>
+
+    <form class="section--contact__paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="PZNFQVFPK8RFG">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
   </div>
+
 </section>

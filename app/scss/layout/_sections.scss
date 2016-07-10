@@ -1,30 +1,46 @@
 .section{
   &__heading{
     position: relative;
-    text-align: center;
-    font-weight: 300;
-    &::after{
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      right: 0;
-      left: 0;
-      width: 200px;
-      margin: 0 auto;
-      border-bottom: solid 2px darkgrey;
+    text-align: left;
+    font-weight: 500;
+    width:40%;
+    float: left;
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 100px;
+  }
+  &__content {
+    float: left;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 12px;
+    &--description {
+      float: left;
+      display: block;
+      color: #5C5C5C;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    &--bullets {
+      float: left;
+      display: block;
+      color: #5C5C5C;
+      margin-top: 0;
+      font-size: 2rem;
     }
   }
   &--hero{
     color: $white;
     &__caption{
         font-family: $font--primary;
-        font-size: 5rem;
+        font-size: 7rem;
         font-weight: 700;
         margin: 10px 0 10px;
         letter-spacing: 3px;
         width: 70px;
         text-transform: uppercase;
-        line-height: 1.2;
+        line-height: 1.1;
     }
     &__description{
       display: block;
@@ -33,7 +49,7 @@
       font-weight: 300;
       letter-spacing: 1px;
       margin: 11px 0 18px;
-      color: darkgray;
+      color: dcdcdc;
     }
     &__header{
       margin-top: 20px;
@@ -47,8 +63,33 @@
         color: inherit;
       }
     }
+    &__date{
+      text-align: center;
+      display: block;
+      font-family: $font--secondary;
+      font-size: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: white;
+      margin: 0;
+    }
+    &__arrow{
+      margin-top: 100px;
+      width: 5em;
+      position: absolute;
+      bottom: 0;
+      left: 47%;
+    }
   }
   &--contact{
     background-color: #154c71;
+    background-image: url(/dist/images/cover-image-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+      &__paypal{
+        text-align: center;
+        position: relative;
+        bottom: 180px;
+      }
   }
 }
