@@ -22,6 +22,7 @@ var paths = {
   source: {
     scripts: [
       'bower_components/angular/angular.js',
+      'bower_components/angular-resource/angular-resource',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'app/js/**/*.js'
     ],

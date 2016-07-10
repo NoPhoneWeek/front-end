@@ -14,7 +14,8 @@ angular.module('noPhoneWeek', ['ui.router', 'noPhoneWeek.controllers'])
     })
     .state('login', {
       url: '/login',
-      templateUrl: '/dist/templates/user-login.html'
+      templateUrl: '/dist/templates/user-login.html',
+      controller: 'LoginCtrl'
     })
     .state('register', {
       url: '/register',

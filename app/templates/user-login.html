@@ -2,9 +2,9 @@
   <div class="authenticator">
     <div class="authenticator__container">
       <div class="authenticator__heading">Sign In</div>
-      <form method="post" action="#" class="form authenticator__form">
-        <p><input type="email" class="form__input form__input--wide" placeholder="Marshall@Example.com"></p>
-        <p><input type="password" class="form__input form__input--wide" placeholder="*******"></p>
+      <form ng-submit="UserLogin()" class="form authenticator__form">
+        <p><input type="email" class="form__input form__input--wide" ng-model="credentials.username" placeholder="Marshall@Example.com"></p>
+        <p><input type="password" class="form__input form__input--wide" ng-model="credentials.password" placeholder="*******"></p>
         <p><a href="#recover" class="help-text">Forgot password?</a></p>
         <input type="submit" class="button button-gradiented button-blue button-block" value="Sign In">
       </form>
