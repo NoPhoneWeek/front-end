@@ -57,6 +57,10 @@
     }
     &__nav{
       float: right;
+      font-size: 1.9rem;
+      &:hover{
+        text-shadow: 0px 0px 1.5px white;
+        }
       a{
         display: inline-block;
         margin-left: 20px;
