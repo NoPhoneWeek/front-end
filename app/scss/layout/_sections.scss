@@ -7,7 +7,7 @@
     float: left;
     font-size: 3.5rem;
     color: #333;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
   &__content {
     float: left;
@@ -57,7 +57,7 @@
     }
     &__nav{
       float: right;
-      font-size: 1.9rem;
+      font-size: 1.6rem;
       &:hover{
         text-shadow: 0px 0px 1.5px white;
         }
@@ -83,6 +83,12 @@
       position: absolute;
       bottom: 0;
       left: 47%;
+    }
+  }
+  &--about{
+    &__share{
+      @include tinted-bg($white, .8, '/dist/images/cover-image-5.jpg', cover);
+      background-position: 50% 40%;
     }
   }
   &--contact{
