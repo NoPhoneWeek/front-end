@@ -1,0 +1,9 @@
+.fancy-list{
+  list-style-type: none;
+  font-family: 'Ionicons';
+  li{
+	&::before{
+      content: "/f3cb";
+	}
+  }
+}

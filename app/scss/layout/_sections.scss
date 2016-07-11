@@ -90,6 +90,11 @@
       @include tinted-bg($white, .8, '/dist/images/cover-image-5.jpg', cover);
       background-position: 50% 40%;
     }
+    &__share-buttons{
+      list-style: none;
+      padding: 0;
+      display: inline-block;
+    }
   }
   &--contact{
     background-color: #154c71;
