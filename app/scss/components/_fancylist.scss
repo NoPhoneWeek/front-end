@@ -3,7 +3,8 @@
   font-family: 'Ionicons';
   li{
 	&::before{
-      content: "/f3cb";
+      content: "\f122";
+      padding-right: 5px;
 	}
   }
 }
