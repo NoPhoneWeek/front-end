@@ -1,7 +1,6 @@
 .page{
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include tinted-bg($black, .0, '/dist/images/hero-photo.jpg', cover);
   width: 100%;
   min-height: 100vh;
-  @include tinted-bg($black, .7, '/dist/images/cover-image.jpg', cover);
+  background-position: 50% 90%;
 }

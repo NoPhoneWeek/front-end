@@ -22,10 +22,12 @@ var paths = {
   source: {
     scripts: [
       'bower_components/angular/angular.js',
+      'bower_components/angular-resource/angular-resource',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'app/js/**/*.js'
     ],
     styles: [
+      'bower_components/ionicons/css/ionicons.css',
       'app/scss/**/*.scss'
     ],
     templates: [
@@ -33,6 +35,9 @@ var paths = {
     ],
     images: [
       'app/images/**/*.*'
+    ],
+    fonts: [
+        'bower_components/ionicons/fonts/**/*.*'
     ]
   },
   target: {
@@ -40,9 +45,16 @@ var paths = {
     styles: 'public/dist/css',
     templates: 'public/dist/templates',
     images: 'public/dist/images',
-    sourcemaps: './maps'
+    sourcemaps: './maps',
+    fonts: 'public/dist/fonts'
   }
 };
+
+gulp.task('copy-fonts', function(){
+  gulp.src(paths.source.fonts, [{ base: './' }])
+      .pipe(gulp.dest(paths.target.fonts))
+  ;
+});
 
 gulp.task('clean', function() {
   return del.sync(['public/dist/**/*']);
@@ -108,6 +120,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.source.templates, ['templates', reload])
 });
 
-gulp.task('build', ['clean', 'scripts', 'styles', 'images', 'templates']);
+gulp.task('build', ['clean', 'scripts', 'styles', 'images', 'templates', 'copy-fonts']);
 
 gulp.task('default', ['scripts', 'styles', 'templates', 'browser-sync', 'watch']);
