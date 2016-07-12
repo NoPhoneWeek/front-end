@@ -1,5 +1,7 @@
 # NoPhoneWeek - front-end
 
+[![Build Status](https://travis-ci.org/NoPhoneWeek/front-end.svg?branch=master)](https://travis-ci.org/NoPhoneWeek/front-end)
+
 ### Requirements
 
 > This project was tested on an UNIX based OS (Ubuntu 15.04 and OS X 10.11)
