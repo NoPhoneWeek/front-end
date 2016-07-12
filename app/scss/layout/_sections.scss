@@ -86,6 +86,7 @@
     }
   }
   &--about{
+    font-family: cursive;
     &__share{
       @include tinted-bg($white, .8, '/dist/images/cover-image-5.jpg', cover);
       background-position: 50% 40%;
