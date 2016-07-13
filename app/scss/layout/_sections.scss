@@ -9,6 +9,16 @@
     color: #333;
     margin-bottom: 150px;
   }
+  &__subheading{
+    position: relative;
+    text-align: left;
+    font-weight: 500;
+    width:40%;
+    float: left;
+    font-size: 2.5rem;
+    color: darkgray;
+    margin-bottom: 150px;
+  }
   &__content {
     float: left;
     font-weight: 500;
