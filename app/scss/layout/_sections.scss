@@ -3,16 +3,22 @@
     position: relative;
     text-align: left;
     font-weight: 500;
-    width:40%;
-    float: left;
     font-size: 3.5rem;
     color: #333;
-    margin-bottom: 150px;
+    margin-bottom: 0;
+  }
+  &__subheading{
+    position: relative;
+    text-align: left;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #a2a2a2;
+    margin-top: 0;
   }
   &__content {
     float: left;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #333;
     margin-bottom: 12px;
     &--description {

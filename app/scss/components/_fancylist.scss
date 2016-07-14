@@ -1,10 +1,11 @@
 .fancy-list{
   list-style-type: none;
-  font-family: 'Ionicons';
   li{
 	&::before{
-      content: "\f122";
+      content: "\f375";
       padding-right: 5px;
+      font-family: 'Ionicons';
+      color: #679567;
 	}
   }
 }
