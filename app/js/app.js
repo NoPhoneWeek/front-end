@@ -28,6 +28,14 @@ angular.module('noPhoneWeek', ['ui.router', 'noPhoneWeek.controllers'])
     .state('recover', {
       url: '/recover',
       templateUrl: '/dist/templates/user-recover.html'
+    })
+    .state('tos', {
+      url: '/tos',
+      templateUrl: '/dist/templates/terms.html'
+    })
+    .state('privacy', {
+      url: '/privacy',
+      templateUrl: '/dist/templates/privacy.html'
     });
 }])
 
