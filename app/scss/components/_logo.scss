@@ -1,10 +1,27 @@
 .logo{
+<<<<<<< HEAD
   width: 20%;
   height: auto;
   svg {
     max-width: 100%;
   }
   a {
+=======
+  border: solid medium white;
+  width: 83px;
+  height: 83px;
+  padding: 10px;
+  line-height: 1.3;
+  position: relative;
+  top: -20px;
+    &__weak{
+      font-weight: 300;
+    }
+    &__strong{
+      letter-spacing: 1px;
+    }
+  a{
+>>>>>>> master
     width: 100%;
     text-decoration: none;
     color: white;

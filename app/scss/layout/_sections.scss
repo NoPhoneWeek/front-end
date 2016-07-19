@@ -3,16 +3,34 @@
     position: relative;
     text-align: left;
     font-weight: 500;
+<<<<<<< HEAD
     width:40%;
     float: left;
     font-size: 3.5rem;
     color: #333;
     margin-bottom: 150px;
+=======
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 0;
+  }
+  &__subheading{
+    position: relative;
+    text-align: left;
+    font-weight: 500;
+    font-size: 2rem;
+    color: black;
+    margin-top: 0;
+>>>>>>> master
   }
   &__content {
     float: left;
     font-weight: 500;
+<<<<<<< HEAD
     font-size: 2.5rem;
+=======
+    font-size: 2.6rem;
+>>>>>>> master
     color: #333;
     margin-bottom: 12px;
     &--description {
@@ -57,7 +75,11 @@
     }
     &__nav{
       float: right;
+<<<<<<< HEAD
       font-size: 2rem;
+=======
+      font-size: 1.6rem;
+>>>>>>> master
       &:hover{
         text-shadow: 0px 0px 1px white;
         }
@@ -106,7 +128,10 @@
         position: relative;
         bottom: 180px;
       }
+<<<<<<< HEAD
   }
   &--about {
+=======
+>>>>>>> master
   }
 }

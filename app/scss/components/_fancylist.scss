@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .fancy-list{ 
   list-style-type: none;
   font-family: 'Ionicons';
@@ -6,5 +7,16 @@
         content: "\f122";
         padding-right: 10px;
   	}
+=======
+.fancy-list{
+  list-style-type: none;
+  li{
+	&::before{
+      content: "\f375";
+      padding-right: 5px;
+      font-family: 'Ionicons';
+      color: #679567;
+	}
+>>>>>>> master
   }
 }
